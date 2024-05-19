@@ -1,0 +1,576 @@
+
+/* font family import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+*,::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* backgrounds for light mode */
+    --background-l-first:rgba(255,255,255,1); 
+    --background-l-sec:rgba(243,247,249,1);
+    --background-l-form:rgba(247,247,247);
+    --nav-foot-bg:rgba(18,18,18,1);
+
+    /* backgrounds for dark mode */
+    --background-d-first:rgba(13,13,13,1); 
+    --background-d-sec:rgba(22,22,22,1);
+    --background-d-form:rgba(22,22,22,1);
+
+    --prim-color: rgba(234,180,0,1);
+
+    /*shadow*/
+    --card-shadow: 1px 4px 15px 0 rgba(0,0,0,0.05), 1px 1px 4px 0 rgba(0,0,0,0.15);
+
+
+    /* secondary color for light mode */
+    --sec-l-color:rgba(23,107,135,1);
+
+    /* secondary color for light mode */
+    --sec-d-color:rgba(235,235,235,1);
+
+    /* card background color */
+    /*light mode card*/
+    --card-l-bg:rgba(255,255,255,1);
+
+    /*dark mode card*/
+    --card-d-bg:rgba(24,24,24,1);
+
+    /* texts color */
+    /* black text */
+    --text-b: rgba(0,0,0,1);
+    --text-b-h: rgba(0,0,0,0.83);
+    --text-b-m: rgba(0,0,0,0.6);
+    --text-b-l: rgba(0,0,0,0.3);
+
+    /* white text */
+    --text-w: rgba(255,255,255,1);
+    --text-w-h: rgba(255,255,255,0.83);
+    --text-w-m: rgba(255,255,255,0.6);
+    --text-w-l: rgba(255,255,255,0.3);
+}
+
+/*light mode config*/
+@media (prefers-color-scheme:light){
+    :root{
+
+        /* background color */
+        --first-bg:var(--background-l-first);
+        --sec-bg:var(--background-l-sec);
+        --form-bg:var(--background-l-form);
+        --nav-footer-bg:var(--nav-foot-bg);
+
+        /* secondary color for light mode */
+        --sec-color:var(--sec-l-color);
+
+        /*card bg*/
+        --card-bg:var(--card-l-bg);
+
+        /* text for light theme */
+        --text: var(--text-b);
+        --text-h: var(--text-b-h);
+        --text-m: var(--text-b-m);
+        --text-l: var(--text-b-l);
+    }
+    body{
+        background-color: var(--first-bg) !important;
+        color: var(--text-h) !important;
+    }
+}
+
+/*dark mode config*/
+@media (prefers-color-scheme:dark){
+    :root{
+
+        /* background color */
+        --first-bg:var(--background-d-first);
+        --sec-bg:var(--background-d-sec);
+        --form-bg:var(--background-d-form);
+        --nav-footer-bg:var(--nav-foot-bg);
+
+        /* secondary color for light mode */
+        --sec-color:var(--sec-d-color);
+
+        /*card bg*/
+        --card-bg:var(--card-d-bg);
+
+        /* text for light theme */
+        --text: var(--text-w);
+        --text-h: var(--text-w-h);
+        --text-m: var(--text-w-m);
+        --text-l: var(--text-w-l);
+    }
+    body{
+        background-color: var(--first-bg) !important;
+        color:var(--text-h) !important;
+    }
+}
+
+html{
+    font-size: 10px !important;
+}
+
+body{
+    font-family:'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, small, div, span, textarea, input{
+    font-family:'Lato', sans-serif;
+}
+select, select:focus, option{
+    font-family:'Lato', sans-serif !important;
+}
+
+h1{
+    font-size:4.778rem !important;
+}
+.nav-logo{
+    max-height: 3.981rem;
+}
+h2{
+    font-size: 3.981rem !important;
+}
+h3{
+    font-size: 3.318rem !important;
+}
+
+h4{
+    font-size: 2.765rem !important;
+}
+h5{
+    font-size: 2.304rem !important;
+}
+h6{
+    font-size: 1.92rem !important;
+}
+p, button, input, li, a, textarea, textarea::placeholder, option, select , select:focus{
+    font-size: 1.8rem !important;
+}
+small{
+    font-size: 1.422rem !important;
+}
+
+/* please use sections for sectioning */
+section, header{
+    padding: 52px 12vw;
+    /* max-width:1440px; */
+}
+.navigation-container{
+    padding: 0 12vw;
+}
+
+/*use for section title wrapper*/
+.section-title{
+    margin-bottom: 52px;
+}
+
+
+@media screen and (max-width:1200px) {
+    
+    h1{
+        font-size: 3.244rem !important;
+    }
+    .nav-logo{
+        max-height: 2.883rem;
+    }
+    h2{
+        font-size: 2.883rem !important;
+    }
+    h3{
+        font-size: 2.563rem !important;
+    }
+    h4{
+        font-size: 2.278rem !important;
+    }
+    h5{
+        font-size: 2.025rem !important;
+    }
+    h6{
+        font-size: 1.8rem !important;
+    }
+    p, button, input, li, a, textarea, textarea::placeholder, option, select, select:focus{
+        font-size: 1.6rem !important;
+    }
+    small{
+        font-size: 1.333rem !important;
+    }
+    section, header{
+        padding: 52px 10vw;
+    }
+    .navigation-container{
+        padding: 0 10vw;
+    }
+
+    /*use for section headers*/
+    .section-title{
+        margin-bottom: 52px;
+    }
+}
+
+
+@media screen and (max-width:640px) {
+    
+    h1{
+        font-size: 2.361rem !important;
+    }
+    .nav-logo{
+        max-height: 2.213rem;
+    }
+    h2{
+        font-size: 2.213rem !important;
+    }
+    h3{
+        font-size: 2.073rem !important;
+    }
+    h4{
+        font-size: 1.944rem !important;
+    }
+    h5{
+        font-size: 1.822rem !important;
+    }
+    h6{
+        font-size: 1.707rem !important;
+    }
+    p, button, input, li, a, textarea, textarea::placeholder, option, select, select:focus{
+        font-size: 1.6rem !important;
+    }
+    small{
+        font-size: 1.264rem !important;
+    }
+    section, header{
+        padding: 32px 5vw;
+    }
+
+    .navigation-container{
+        padding: 0 5vw;
+    }
+
+    .section-title{
+        margin-bottom: 32px;
+    }
+}
+/* button config */
+
+.cta-btn{
+    background-image: linear-gradient(to right, rgba(211,162,0,1), rgba(255,215,42,1));
+    font-weight: 600;
+    color: var(--text-b);
+    border:none;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    padding: 0.6rem 1.6rem;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+
+}
+
+.cta-btn:disabled{
+    background-image: linear-gradient(to right, rgba(211,162,0,0.3), rgba(255,215,42,0.3));
+    color: var(--text-b-m);
+}
+
+.outlined-btn{
+    font-weight: 500;
+    color: var(--prim-color);
+    border:0.2rem solid var(--prim-color);
+    background-color: unset;
+    border-radius: 0.4rem;
+    padding: 0.6rem 1.6rem;
+    text-transform: uppercase;
+}
+
+.text-btn{
+    font-weight: 500;
+    color: var(--prim-color);
+    border: none;
+    border-bottom: 0.2rem  solid var(--prim-color) ;
+    background-color: unset;
+    padding: 0.8rem 0.2rem;
+    padding-bottom: 0.1rem;
+    padding-left:0;
+    text-transform: capitalize;
+}
+
+/* input field appearance style */
+input[type = 'text'],
+input[type = 'email'],
+select,
+input[type = 'password'],
+input[type = 'number'], textarea{
+    display: block;
+    background-color: unset;
+    padding: 0.8rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
+    border: none;
+    border-bottom: 0.2rem  solid var(--text-l) ;
+    background-color: unset;
+    color: var(--text-h);
+    transition: all 0.25s;
+    position:relative;
+}
+select{
+    color: var(--text-m);
+    padding-left: 0.4rem;
+}
+
+input[type = 'text']::placeholder,
+input[type = 'email']::placeholder,
+option,
+input[type = 'password']::placeholder,
+input[type = 'number']::placeholder,
+textarea::placeholder{
+    text-transform: capitalize;
+    color: var(--text-m);
+    transition: all 0.25s;
+}
+
+
+input[type = 'text']:focus,
+input[type = 'email']:focus,
+select:focus,
+input[type = 'password']:focus,
+input[type = 'number']:focus,
+textarea:focus{
+    background-color: unset;
+    border-bottom: 0.2rem  solid var(--text-m) ;
+    background-color: unset;
+    outline: none;
+    transition: all 0.25s;
+    font-family:initial;
+}
+
+
+option{
+    background-color: var(--first-bg);
+}
+
+input[type = 'text']:focus::placeholder,
+input[type = 'email']:focus::placeholder,
+input[type = 'password']:focus::placeholder,
+input[type = 'number']:focus::placeholder,
+textarea:focus::placeholder{
+    color: var(--text-l);
+    font-family:'Lato', sans-serif;
+    transition: all 0.25s;
+}
+
+
+/* headers and bodytext styling */
+/* use for headers that are of secondary color NB:secondary color is blue or ash depending on the prefered color scheme */
+.important-header{
+    color:var(--sec-color);
+    text-transform: capitalize;
+}
+
+/* use for regular color headers  */
+.main-header, .sub-header{
+    color:var(--text-h);
+    text-transform: capitalize;
+    margin-bottom: 8;
+}
+.sub-header{
+    color:var(--text-m);
+    /* font-family: 'Montserrat', sans-serif; */
+    font-weight: 400;
+}
+
+/* body texts are paragraph texts */
+.body-text{
+    color:var(--text-m);
+}
+
+svg{
+    fill: var(--sec-color) !important;
+}
+
+.calendly-overlay{
+    backdrop-filter: blur(10px); 
+}
+
+
+
+/* updated css */
+
+.blue{
+    color:#176B87;
+}
+
+
+
+@keyframes hero-anim {
+    from{
+        transform: scale(0.8) rotate(360deg);
+    };
+    to{
+        transform: scale(1.5) rotate(360deg);    
+    }
+}
+
+@keyframes hero-anim-after {
+    from{
+        transform: scale(0.8);
+    };
+    to{
+        transform: scale(2);    
+    }
+}
+
+.hero-card{
+    position: absolute;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(55px);
+    -webkit-backdrop-filter:blur(55px);
+    top: 60vh;
+    z-index:1;
+    transform: translateY(-50%);
+    border-radius: 48px;
+    padding: 64px;
+    display: inline-block;
+}
+
+.hero-card-title-yellow{
+    background-image: linear-gradient(to right, #E4C300, #FFEA42); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    font-weight:700;
+    text-transform: capitalize;
+}
+
+.hero-card-links-wrapper{
+    margin-top: 56px;
+}
+
+.hero-card-link{
+    display:inline-block;
+    padding:12px 32px;
+    text-transform: capitalize;
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
+    border-radius:4px;
+    text-decoration:none;
+}
+
+.hero-card-link-active{
+
+    background-image: linear-gradient(to right, #E4C300, #FFEA42); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+    position:relative;
+    font-weight: 500;
+
+}
+.hero-card-link-active::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0; 
+    background-color: rgb(0,0,0);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 4px;
+    
+}
+@media screen and (max-width:576px) {
+    .hero-card-link{
+        display: block;
+        margin-right:0 !important;
+    }
+}
+
+
+.sevice-hero-img{
+    position: absolute;
+    max-width: 40%;
+    left:50%;
+    top:65%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.service{
+    width:100%;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap:24px;
+    justify-content: space-between;
+}
+
+.service-img{
+    max-width: 50%;
+}
+
+.reversed{
+    flex-direction: row-reverse;
+}
+
+.blue-sec{
+    background-color:#EAF4F9;
+}
+
+@media screen and (max-width:640px) {
+    .sevice-hero-img{
+        
+        left: 50%;
+        bottom:15vh;
+        top:unset;
+        width:calc( 70%);
+        max-width:calc( 70% );
+        transform: translate(-50%, 0);
+    } 
+    .hero-card{
+        
+        top: 15vh;
+        left: 50%;
+        width:calc( 100% - 10vw);
+        transform: translate(-50%, 0);
+        text-align: center;
+    }
+
+    .service{
+        width:100%;
+        flex-direction:column-reverse ;
+        justify-content: center ;
+        align-items: center;
+        gap:24px;
+    }
+    .service-img{
+        max-width:80%;
+    }
+
+    .service-card-details {
+        text-align: center;
+    }
+
+    .service-card-details ul{
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width:460px) {
+    .sevice-hero-img{
+        
+        left: 50%;
+        bottom:15vh;
+        top:unset;
+        width:calc( 100% - 10vw);
+        max-width:calc( 100% - 10vw);
+        transform: translate(-50%, 0);
+    } 
+}
+
+
+
