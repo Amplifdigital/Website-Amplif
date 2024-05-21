@@ -49,50 +49,32 @@ function Form() {
       <div className="user-info">
         <input
           type="text"
-          placeholder="name"
+          placeholder="Name*"
           required
           name="name"
           onChange={handleChange}
         />
         <input
-          type="number"
-          placeholder="mobile"
-          required
-          name="mobile_no"
-          onChange={handleChange}
-        />
-        <input
           type="email"
-          placeholder="email ID"
+          placeholder="Email*"
           required
           name="email_id"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="company name"
-          required
-          name="company_name"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="location"
-          required
-          name="location"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="how did you hear about us"
-          required
-          name="how_did_you_hear"
           onChange={handleChange}
         />
       </div>
       <select name="service_selected" id="" onChange={handleChange}>
         <option value="not" default>
-          How can we help you? (Select option)
+          Choose Service*
+        </option>
+        {serviceData.map((cont) => (
+          <option value={cont.title} key={cont.title}>
+            {cont.title}
+          </option>
+        ))}
+      </select>
+      <select name="Budget_selected" id="" onChange={handleChange}>
+        <option value="not" default>
+          Your Budget*
         </option>
         {serviceData.map((cont) => (
           <option value={cont.title} key={cont.title}>
@@ -105,7 +87,7 @@ function Form() {
         id=""
         cols="30"
         rows="2"
-        placeholder="describe your requirement"
+        placeholder="Write your message here*"
         onChange={handleChange}
       ></textarea>
       <button
@@ -114,7 +96,7 @@ function Form() {
         disabled={!allFieldsFilled}
         onClick={() => console.log(userInfo)}
       >
-        submit
+        Submit
       </button>
     </form>
   );

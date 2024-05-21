@@ -12,9 +12,6 @@ import Footer from "./components/footer";
 import Services from "./components/Services";
 import Portfolio from "./components/portfolio";
 import Project from './components/Project'
-
-
-
 import GoogleAds from "./components/single-service-pages/google-ads";
 import YoutubeAds from "./components/single-service-pages/youtube-ads";
 import FacebookAds from "./components/single-service-pages/facebook-ads";
@@ -25,9 +22,6 @@ import Wix from "./components/single-service-pages/wix";
 import Shopify from "./components/single-service-pages/shopify";
 import Whatsapp from "./components/Whatsapp";
 import ScrollToTopButton from "./components/ScrollToTopButton";
-
-
-
 function App() {
   const getInitialTheme = () => {
     const storedTheme = localStorage.getItem('theme');

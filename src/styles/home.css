@@ -23,7 +23,6 @@
     background-clip: text;
     color: transparent;
     background-image: linear-gradient(99.64deg, #F1F52E 0.53%, #32FFE6 59.62%);
-
     margin-bottom:32px;
 
 }
@@ -46,7 +45,7 @@
 }
 
 .hero-sec .cta-btn{
-    text-transform:capitalize;
+    text-transform:none;
 }
 
 .arrow{
